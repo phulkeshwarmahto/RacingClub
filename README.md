@@ -1,0 +1,55 @@
+# Racing Club MERN Project
+
+This project has been converted from static HTML/CSS pages into a MERN stack application:
+
+- `client/` -> React + Vite responsive frontend
+- `server/` -> Express + MongoDB REST API
+- `server/src/data/seed.js` -> seed script with existing club content
+
+## 1) Install dependencies
+
+```bash
+npm install
+npm install --prefix server
+npm install --prefix client
+```
+
+## 2) Configure environment variables
+
+Copy and fill the env files:
+
+- `server/.env` from `server/.env.example`
+- `client/.env` from `client/.env.example`
+
+Required backend value:
+
+- `MONGODB_URI` (for example `mongodb://127.0.0.1:27017/racing_club`)
+
+## 3) Seed database
+
+```bash
+npm run seed
+```
+
+## 4) Run in development
+
+```bash
+npm run dev
+```
+
+Frontend: `http://localhost:5173`  
+Backend: `http://localhost:5000`
+
+## API routes
+
+- `GET /api/health`
+- `GET /api/content/home`
+- `GET /api/content/achievements`
+- `GET /api/content/departments`
+- `GET /api/content/sponsorship`
+- `POST /api/contact`
+
+## Notes
+
+- Legacy static files are kept in the root for reference.
+- Media is served from `client/public/assets`.

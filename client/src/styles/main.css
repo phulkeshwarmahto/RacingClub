@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-[#04101f] bg-[radial-gradient(circle_at_15%_15%,#12335a_0%,#04101f_45%,#020813_100%)] font-body text-[#f8f3e5];
+  }
+}
