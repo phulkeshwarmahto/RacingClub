@@ -50,6 +50,14 @@ JWT_SECRET=<long-random-secret>
 NODE_ENV=production
 PORT=5000
 CLIENT_ORIGINS=https://niamtracing.in,https://www.niamtracing.in,https://<your-vercel-project>.vercel.app
+CLOUDINARY_CLOUD_NAME=<cloud-name>
+CLOUDINARY_API_KEY=<api-key>
+CLOUDINARY_API_SECRET=<api-secret>
+CLOUDINARY_URL=cloudinary://<api-key>:<api-secret>@<cloud-name>
+CLOUDINARY_FOLDER=niamt-racing
+MAX_IMAGE_SIZE_BYTES=8388608
+MAX_DOCUMENT_SIZE_BYTES=15728640
+MAX_VIDEO_SIZE_BYTES=104857600
 ```
 
 Notes:
@@ -114,7 +122,7 @@ Optional API domain:
 
 1. `https://niamtracing.in/robots.txt` returns expected rules.
 2. `https://niamtracing.in/sitemap.xml` is accessible.
-3. `https://<api-domain>/api/health` returns `{ "ok": true }`.
+3. `https://niamtracing/api/health` returns `{ "ok": true }`.
 4. Contact form writes data in MongoDB.
 5. SSL lock icon appears on frontend and API domains.
 
@@ -128,6 +136,14 @@ JWT_SECRET=
 PORT=5000
 NODE_ENV=production
 CLIENT_ORIGINS=http://localhost:5173,https://niamtracing.in,https://www.niamtracing.in
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+CLOUDINARY_URL=
+CLOUDINARY_FOLDER=niamt-racing
+MAX_IMAGE_SIZE_BYTES=8388608
+MAX_DOCUMENT_SIZE_BYTES=15728640
+MAX_VIDEO_SIZE_BYTES=104857600
 ```
 
 ### Frontend (`client/.env.production`)

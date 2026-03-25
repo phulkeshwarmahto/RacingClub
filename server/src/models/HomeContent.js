@@ -31,7 +31,8 @@ const testimonialSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     text: { type: String, required: true },
-    image: { type: String, required: true }
+    image: { type: String, required: true },
+    publicId: { type: String }
   },
   { _id: false }
 );
@@ -39,7 +40,9 @@ const testimonialSchema = new mongoose.Schema(
 const homeContentSchema = new mongoose.Schema(
   {
     heroImage: { type: String, required: true },
+    heroImagePublicId: { type: String },
     promoVideo: { type: String, required: true },
+    promoVideoPublicId: { type: String },
     clubName: { type: String, required: true },
     subtitle: { type: String, required: true },
     institution: { type: String, required: true },
@@ -50,6 +53,7 @@ const homeContentSchema = new mongoose.Schema(
     announcementTicker: { type: String, required: true },
     legacyText: { type: String, required: true },
     legacyImage: { type: String, required: true },
+    legacyImagePublicId: { type: String },
     domains: { type: [domainSchema], default: [] },
     reachMetrics: { type: [reachMetricSchema], default: [] },
     testimonial: { type: testimonialSchema, required: true },

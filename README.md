@@ -9,6 +9,7 @@ This project has been converted from static HTML/CSS pages into a MERN stack app
 Full deployment steps are documented in:
 
 - [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+- [CLOUDINARY_GUIDE.md](./CLOUDINARY_GUIDE.md)
 
 ## 1) Install dependencies
 
@@ -52,6 +53,14 @@ Backend: `http://localhost:5000`
 - `GET /api/content/departments`
 - `GET /api/content/sponsorship`
 - `POST /api/contact`
+- `POST /api/media/image`
+- `POST /api/media/images`
+- `POST /api/media/document`
+- `POST /api/media/documents`
+- `POST /api/media/video`
+- `POST /api/media/videos`
+- `DELETE /api/media/image`
+- `DELETE /api/media/file`
 
 ## Notes
 

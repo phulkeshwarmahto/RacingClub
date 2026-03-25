@@ -3,6 +3,7 @@ import { fetchHomeContent } from "../api/content";
 import { iconMap } from "../components/icons";
 import { ErrorState, LoadingState } from "../components/PageState";
 import Seo from "../components/Seo";
+import { buildCloudinarySrcSet, getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const panelClass =
   "animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4";
@@ -48,7 +49,9 @@ export default function HomePage() {
 
       <section className="relative min-h-[340px] overflow-hidden rounded-2xl">
         <img
-          src={content.heroImage}
+          src={getCloudinaryImageUrl(content.heroImage, { width: 1400 })}
+          srcSet={buildCloudinarySrcSet(content.heroImage)}
+          sizes="(max-width: 768px) 100vw, 1200px"
           alt="NIAMT Racing vehicle at track event"
           className="h-screen w-full object-cover brightness-50"
           fetchPriority="high"
@@ -101,7 +104,14 @@ export default function HomePage() {
       <section className={panelClass}>
         <h3 className={headingClass}>Our Legacy</h3>
         <div className="grid gap-4 md:grid-cols-[1.2fr_1.8fr] md:items-center">
-          <img src={content.legacyImage} alt="NIAMT Racing team legacy" className="w-full rounded-xl" loading="lazy" />
+          <img
+            src={getCloudinaryImageUrl(content.legacyImage, { width: 1000 })}
+            srcSet={buildCloudinarySrcSet(content.legacyImage)}
+            sizes="(max-width: 768px) 100vw, 45vw"
+            alt="NIAMT Racing team legacy"
+            className="w-full rounded-xl"
+            loading="lazy"
+          />
           <p className={textClass}>{content.legacyText}</p>
         </div>
       </section>
@@ -120,9 +130,10 @@ export default function HomePage() {
 
       <section className={`${panelClass} text-center`}>
         <img
-          src={content.testimonial.image}
+          src={getCloudinaryImageUrl(content.testimonial.image, { width: 256 })}
           alt={content.testimonial.name}
           className="mx-auto h-20 w-20 rounded-full border-2 border-[#ffc955] object-cover"
+          loading="lazy"
         />
         <blockquote className="mx-auto mt-3 max-w-2xl italic text-slate-200">{content.testimonial.text}</blockquote>
         <cite className="mt-2 block font-semibold text-[#ffc955]">{content.testimonial.name}</cite>

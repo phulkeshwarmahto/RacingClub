@@ -3,6 +3,7 @@ import { fetchSponsorship } from "../api/content";
 import { iconMap } from "../components/icons";
 import { ErrorState, LoadingState } from "../components/PageState";
 import Seo from "../components/Seo";
+import { buildCloudinarySrcSet, getCloudinaryImageUrl } from "../utils/cloudinary";
 
 const panelClass =
   "animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4";
@@ -79,7 +80,9 @@ export default function SponsorshipPage() {
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {state.data.logos.map((item) => (
             <img
-              src={item.image}
+              src={getCloudinaryImageUrl(item.image, { width: 480 })}
+              srcSet={buildCloudinarySrcSet(item.image, [240, 360, 480, 720])}
+              sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
               alt={item.name}
               key={item._id}
               className="h-24 w-full rounded-lg bg-white/10 p-2 object-contain"

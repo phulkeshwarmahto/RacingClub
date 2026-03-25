@@ -4,6 +4,7 @@ import express from "express";
 import { connectDB } from "./config/db.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import contentRoutes from "./routes/contentRoutes.js";
+import mediaRoutes from "./routes/mediaRoutes.js";
 
 dotenv.config();
 
@@ -34,10 +35,19 @@ app.get("/api/health", (_req, res) => {
 
 app.use("/api/content", contentRoutes);
 app.use("/api/contact", contactRoutes);
+app.use("/api/media", mediaRoutes);
 
 app.use((err, _req, res, _next) => {
   if (err.message === "Not allowed by CORS") {
     return res.status(403).json({ message: "CORS policy blocked this request." });
+  }
+
+  if (err.name === "MulterError") {
+    return res.status(400).json({ message: err.message });
+  }
+
+  if (err.message && err.message.includes("Unsupported file type")) {
+    return res.status(400).json({ message: err.message });
   }
 
   console.error(err);
