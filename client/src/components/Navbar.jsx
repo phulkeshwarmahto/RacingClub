@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-20 flex items-center justify-between gap-4 border-b border-[#ffc95559] bg-[#030a12d1] px-4 py-3 backdrop-blur md:px-8">
       <div className="flex items-center gap-3">
-        <img src="/assets/logoniamtrACING (1).png" alt="Team Thrusters logo" className="h-12 w-12 object-contain" />
+        <a href="/"><img src="/assets/logoniamtrACING (1).png" alt="Team Thrusters logo" className="h-12 w-12 object-contain" /></a>
         <div>
           <h1 className="font-display text-base tracking-wide">Team Thrusters</h1>
           <p className="text-sm text-slate-300">NIAMT Student Racing Club</p>

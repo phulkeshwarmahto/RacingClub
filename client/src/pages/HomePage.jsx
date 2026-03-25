@@ -50,7 +50,7 @@ export default function HomePage() {
         <img
           src={content.heroImage}
           alt="NIAMT Racing vehicle at track event"
-          className="h-full w-full object-cover brightness-50"
+          className="h-screen w-full object-cover brightness-50"
           fetchPriority="high"
         />
         <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-[#020810bf] to-[#02081030] p-5">

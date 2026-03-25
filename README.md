@@ -6,6 +6,10 @@ This project has been converted from static HTML/CSS pages into a MERN stack app
 - `server/` -> Express + MongoDB REST API
 - `server/src/data/seed.js` -> seed script with existing club content
 
+Full deployment steps are documented in:
+
+- [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
 ## 1) Install dependencies
 
 ```bash
@@ -23,7 +27,7 @@ Copy and fill the env files:
 
 Required backend value:
 
-- `MONGODB_URI` (for example `mongodb://127.0.0.1:27017/racing_club`)
+- `MONGO_URI` (or `MONGODB_URI`) (for example `mongodb://127.0.0.1:27017/racing_club`)
 
 ## 3) Seed database
 
