@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchHomeContent } from "../api/content";
 import { iconMap } from "../components/icons";
 import { ErrorState, LoadingState } from "../components/PageState";
+import Seo from "../components/Seo";
 
 const panelClass =
   "animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4";
@@ -39,8 +40,19 @@ export default function HomePage() {
 
   return (
     <div className="grid gap-4">
+      <Seo
+        title="Official Team"
+        description="NIAMT Racing is the official motorsport and Formula Student team of NIAMT Ranchi. Explore projects, achievements, and team updates."
+        path="/"
+      />
+
       <section className="relative min-h-[340px] overflow-hidden rounded-2xl">
-        <img src={content.heroImage} alt="Racing vehicle" className="h-full w-full object-cover brightness-50" />
+        <img
+          src={content.heroImage}
+          alt="NIAMT Racing vehicle at track event"
+          className="h-full w-full object-cover brightness-50"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 flex flex-col justify-center bg-gradient-to-r from-[#020810bf] to-[#02081030] p-5">
           <h2 className="font-display text-3xl leading-tight sm:text-4xl">{content.clubName}</h2>
           <p className="mt-2 text-lg text-[#ffc955]">{content.subtitle}</p>
@@ -63,7 +75,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <video className="w-full rounded-2xl border border-white/10 " autoPlay muted>
+        <video className="w-full rounded-2xl border border-white/10 " autoPlay muted loop playsInline>
           <source src={content.promoVideo} />
         </video>
       </section>
@@ -89,7 +101,7 @@ export default function HomePage() {
       <section className={panelClass}>
         <h3 className={headingClass}>Our Legacy</h3>
         <div className="grid gap-4 md:grid-cols-[1.2fr_1.8fr] md:items-center">
-          <img src={content.legacyImage} alt="Team legacy" className="w-full rounded-xl" />
+          <img src={content.legacyImage} alt="NIAMT Racing team legacy" className="w-full rounded-xl" loading="lazy" />
           <p className={textClass}>{content.legacyText}</p>
         </div>
       </section>

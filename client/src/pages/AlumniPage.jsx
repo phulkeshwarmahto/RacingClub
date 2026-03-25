@@ -1,6 +1,14 @@
+import Seo from "../components/Seo";
+
 export default function AlumniPage() {
   return (
     <div className="grid gap-4">
+      <Seo
+        title="Alumni"
+        description="Discover the NIAMT Racing alumni network and their continued impact in engineering and motorsport."
+        path="/alumni"
+      />
+
       <section className="animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4">
         <h3 className="mb-3 font-display text-xl">Our Alumni Network</h3>
         <p className="text-slate-300">

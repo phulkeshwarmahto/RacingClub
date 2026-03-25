@@ -1,11 +1,18 @@
 import ContactForm from "../components/ContactForm";
 import { iconMap } from "../components/icons";
+import Seo from "../components/Seo";
 
 const { FaPhone, FaEnvelope, FaLocationDot } = iconMap;
 
 export default function ContactPage({ homeContent }) {
   return (
     <div className="grid gap-4">
+      <Seo
+        title="Contact"
+        description="Get in touch with NIAMT Racing for partnerships, queries, and collaboration opportunities."
+        path="/contact"
+      />
+
       <section className="animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4">
         <h3 className="mb-2 font-display text-xl">Contact Us</h3>
         <p className="text-slate-300">Reach our team directly or submit your question using the form below.</p>

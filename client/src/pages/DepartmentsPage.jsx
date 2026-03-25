@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchDepartments } from "../api/content";
 import { iconMap } from "../components/icons";
 import { ErrorState, LoadingState } from "../components/PageState";
+import Seo from "../components/Seo";
 
 const panelClass =
   "animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4";
@@ -27,6 +28,12 @@ export default function DepartmentsPage() {
 
   return (
     <div className="grid gap-4">
+      <Seo
+        title="Departments"
+        description="Explore the engineering departments that design, build, and race with NIAMT Racing."
+        path="/departments"
+      />
+
       <section className={panelClass}>
         <h3 className="mb-3 font-display text-xl">Our Departments</h3>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

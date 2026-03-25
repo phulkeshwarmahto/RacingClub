@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchSponsorship } from "../api/content";
 import { iconMap } from "../components/icons";
 import { ErrorState, LoadingState } from "../components/PageState";
+import Seo from "../components/Seo";
 
 const panelClass =
   "animate-fadeInUp rounded-2xl border border-white/10 bg-gradient-to-br from-[#112945e6] to-[#09182ad1] p-4";
@@ -35,6 +36,12 @@ export default function SponsorshipPage() {
 
   return (
     <div className="grid gap-4">
+      <Seo
+        title="Sponsorship"
+        description="Partner with NIAMT Racing to support student innovation and motorsport excellence."
+        path="/sponsorship"
+      />
+
       <section className={panelClass}>
         <h3 className="mb-3 font-display text-xl">Why Sponsor Us?</h3>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -76,6 +83,7 @@ export default function SponsorshipPage() {
               alt={item.name}
               key={item._id}
               className="h-24 w-full rounded-lg bg-white/10 p-2 object-contain"
+              loading="lazy"
             />
           ))}
         </div>
