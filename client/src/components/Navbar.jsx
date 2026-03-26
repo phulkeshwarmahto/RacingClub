@@ -10,7 +10,7 @@ const links = [
   { to: "/departments", label: "Departments" },
   { to: "/sponsorship", label: "Sponsorship" },
   { to: "/alumni", label: "Alumni" },
-  { to: "/contact", label: "Contact" }
+  { to: "/contact", label: "ContactUs" }
 ];
 
 export default function Navbar() {

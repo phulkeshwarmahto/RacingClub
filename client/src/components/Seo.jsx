@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "NIAMT Racing";
-const SITE_URL = "https://niamtracing.in";
+const SITE_URL = "https://niamtracing.com,https://niamtracing.vercel.app,https://niamtracing.in";
 const DEFAULT_IMAGE = `${SITE_URL}/assets/logoniamtrACING%20(1).png`;
 
 const toCanonical = (path = "/") => new URL(path, SITE_URL).toString();

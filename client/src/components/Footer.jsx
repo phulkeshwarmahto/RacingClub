@@ -53,7 +53,7 @@ export default function Footer({ homeContent }) {
         </div>
       </div>
 
-      <small className="mt-4 block text-center text-slate-400">© {new Date().getFullYear()} NIAMT Racing Club</small>
+      <small className="mt-4 block text-center text-slate-400">@copy {new Date().getFullYear()} NIAMT Racing Club</small>
     </footer>
   );
 }
