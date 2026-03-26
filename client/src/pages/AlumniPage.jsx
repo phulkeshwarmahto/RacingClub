@@ -2,7 +2,7 @@ import Seo from "../components/Seo";
 
 export default function AlumniPage() {
   return (
-    <div className="grid gap-4">
+    <div className="cursor-target grid gap-4">
       <Seo
         title="Alumni"
         description="Discover the NIAMT Racing alumni network and their continued impact in engineering and motorsport."

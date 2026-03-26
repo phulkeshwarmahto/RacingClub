@@ -36,7 +36,7 @@ export default function SponsorshipPage() {
   if (state.error) return <ErrorState message={state.error} />;
 
   return (
-    <div className="grid gap-4">
+    <div className="cursor-target grid gap-4">
       <Seo
         title="Sponsorship"
         description="Partner with NIAMT Racing to support student innovation and motorsport excellence."

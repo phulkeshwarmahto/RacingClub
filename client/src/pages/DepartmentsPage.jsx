@@ -27,7 +27,7 @@ export default function DepartmentsPage() {
   if (state.error) return <ErrorState message={state.error} />;
 
   return (
-    <div className="grid gap-4">
+    <div className="cursor-target grid gap-4">
       <Seo
         title="Departments"
         description="Explore the engineering departments that design, build, and race with NIAMT Racing."

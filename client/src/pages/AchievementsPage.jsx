@@ -27,7 +27,7 @@ export default function AchievementsPage() {
   if (state.error) return <ErrorState message={state.error} />;
 
   return (
-    <div className="grid gap-4">
+    <div className="cursor-target grid gap-4">
       <Seo
         title="Achievements"
         description="Competition results, milestones, and podium finishes achieved by NIAMT Racing."

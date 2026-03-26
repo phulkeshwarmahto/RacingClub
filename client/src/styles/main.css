@@ -8,3 +8,82 @@
     @apply min-h-screen bg-[#04101f] bg-[radial-gradient(circle_at_15%_15%,#12335a_0%,#04101f_45%,#020813_100%)] font-body text-[#f8f3e5];
   }
 }
+
+.page-transition {
+  animation: page-switch-in 460ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes page-switch-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.99);
+    filter: blur(3px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.custom-cursor-enabled .cursor-zone,
+.custom-cursor-enabled .cursor-zone * {
+  cursor: none;
+}
+
+.custom-cursor-enabled .cursor-zone input,
+.custom-cursor-enabled .cursor-zone textarea,
+.custom-cursor-enabled .cursor-zone select {
+  cursor: text;
+}
+
+.custom-cursor,
+.custom-cursor-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    opacity 180ms ease,
+    width 180ms ease,
+    height 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.custom-cursor {
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgba(255, 201, 85, 0.75);
+  border-radius: 999px;
+  background: radial-gradient(circle at center, rgba(255, 201, 85, 0.15), rgba(255, 201, 85, 0.02));
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.custom-cursor-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 999px;
+  background: rgba(255, 201, 85, 0.95);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.custom-cursor--active {
+  height: 38px;
+  width: 38px;
+  border-color: rgba(255, 217, 124, 0.95);
+  background: radial-gradient(circle at center, rgba(255, 201, 85, 0.3), rgba(255, 201, 85, 0.06));
+}
+
+.custom-cursor-dot--active {
+  height: 12px;
+  width: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}

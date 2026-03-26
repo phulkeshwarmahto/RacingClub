@@ -6,7 +6,7 @@ const { FaPhone, FaEnvelope, FaLocationDot } = iconMap;
 
 export default function ContactPage({ homeContent }) {
   return (
-    <div className="grid gap-4">
+    <div className="cursor-target grid gap-4">
       <Seo
         title="Contact"
         description="Get in touch with NIAMT Racing for partnerships, queries, and collaboration opportunities."

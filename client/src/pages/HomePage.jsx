@@ -40,7 +40,7 @@ export default function HomePage() {
   const content = state.data;
 
   return (
-    <div className="grid gap-4">
+    <div className="cursor-target grid gap-4">
       <Seo
         title="Official Team"
         description="NIAMT Racing is the official motorsport and Formula Student team of NIAMT Ranchi. Explore projects, achievements, and team updates."
