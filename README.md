@@ -11,11 +11,12 @@ Full deployment steps are documented in:
 - [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
 - [CLOUDINARY_GUIDE.md](./CLOUDINARY_GUIDE.md)
 
-## 1) Install dependencies
+## 1) Install dependency
 
 ```bash
 npm install
 npm install --prefix server
+
 npm install --prefix client
 ```
 
@@ -62,7 +63,7 @@ Backend: `http://localhost:5000`
 - `DELETE /api/media/image`
 - `DELETE /api/media/file`
 
-## Notes
+## Notes book
 
 - Legacy static files are kept in the root for reference.
 - Media is served from `client/public/assets`.
