@@ -11,11 +11,12 @@ Full deployment steps are documented in:
 - [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
 - [CLOUDINARY_GUIDE.md](./CLOUDINARY_GUIDE.md)
 
-## 1) Install dependencies
+## 1) Install dependency
 
 ```bash
 npm install
 npm install --prefix server
+
 npm install --prefix client
 ```
 
@@ -47,22 +48,9 @@ Backend: `http://localhost:5000`
 
 ## API routes
 
-- `GET /api/health`
-- `GET /api/content/home`
-- `GET /api/content/achievements`
-- `GET /api/content/departments`
-- `GET /api/content/sponsorship`
-- `POST /api/contact`
-- `POST /api/media/image`
-- `POST /api/media/images`
-- `POST /api/media/document`
-- `POST /api/media/documents`
-- `POST /api/media/video`
-- `POST /api/media/videos`
-- `DELETE /api/media/image`
-- `DELETE /api/media/file`
 
-## Notes
+
+## Notes book
 
 - Legacy static files are kept in the root for reference.
 - Media is served from `client/public/assets`.
