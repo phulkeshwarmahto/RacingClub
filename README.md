@@ -15,7 +15,9 @@ Full deployment steps are documented in:
 
 ```bash
 npm install
+
 npm install --prefix server
+
 npm install --prefix client
 ```
 
